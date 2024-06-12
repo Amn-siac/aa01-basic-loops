@@ -4,7 +4,20 @@ should return a boolean indicating whether or not the the string contains three
 of the same character consecutively.
 */
 
-// Your code here 
+function tripletTrue(str) {
+    if (typeof str !== "string") {
+        return null;
+    }
+    let logic = false;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === str[i + 1] && str[i + 1] === str[i + 2]) {
+            logic = true;
+        }
+
+    }
+    return logic;
+
+}
 
 // console.log(tripletTrue('caaabb'));        // true
 // console.log(tripletTrue('terrrrrible'));   // true

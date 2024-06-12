@@ -5,7 +5,16 @@ Fibonacci sequence are 1; to generate subsequent numbers of the Fibonacci
 sequence, we take the sum of the previous two numbers of the sequence.
 */
 
-// Your code here 
+function fib(n) {
+    let sequence = 1;
+    for (let i = 2; i < n; i++) {
+        sequence += fib(i - 1);
+
+    }
+
+
+    return sequence;
+}
 
 // console.log(fib(1));    // 1
 // console.log(fib(2));    // 1

@@ -4,7 +4,20 @@ function should return a boolean indicating whether or not the string contains
 more dots (.) than dashes (-).
 */
 
-// Your code here 
+function moreDotLessDash(str) {
+    let countDot = 0;
+    let countDash = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === '.') {
+            countDot++;
+        }
+        if (str[i] === '-') {
+            countDash++;
+        }
+
+    }
+    return countDot > countDash;
+}
 
 // console.log(moreDotLessDash('2-D arrays are fun. I think.'));           // true
 // console.log(moreDotLessDash('Morse code is great.'));                   // true
