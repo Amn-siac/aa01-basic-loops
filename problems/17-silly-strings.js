@@ -5,8 +5,18 @@ should return a new word where every vowel of the original word is followed by
 
 Vowels are the letters "a", "e", "i", "o", "u".
 */
-
-// Your code here 
+function sillyString(word) {
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let silString = '';
+    for (let i = 0; i < word.length; i++) {
+        if (vowels.includes(word[i])) {
+            silString += word[i] + 'b' + word[i];
+        } else {
+            silString += word[i];
+        }
+    }
+    return silString;
+}
 
 // console.log(sillyString('stop'));       // stobop
 // console.log(sillyString('that'));       // thabat
