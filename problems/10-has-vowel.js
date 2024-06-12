@@ -6,7 +6,17 @@ otherwise.
 Vowels are the letters "a", "e", "i", "o", "u".
 */
 
-// Your code here 
+function hasVowel(str) {
+    str = str.toLowerCase();
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let has = false;
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+            has = true;
+        }
+    }
+    return has;
+}
 
 // console.log(hasVowel('dog'));          // => true
 // console.log(hasVowel('conventional')); // => true

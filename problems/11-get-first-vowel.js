@@ -6,7 +6,15 @@ contain a vowel, return null.
 Vowels are the letters "a", "e", "i", "o", "u".
 */
 
-// Your code here 
+function getFirstVowel(str) {
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+            return str[i];
+        }
+    }
+    return null;
+}
 
 // console.log(getFirstVowel('battery'));      // 'a'
 // console.log(getFirstVowel('tunnel'));       // 'u'

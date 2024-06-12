@@ -9,7 +9,12 @@ HINT: This function only needs to print using console.log it does not need to
 return anything.
 */
 
-// Your code here 
+function logBetweenStepper(num1, num2, num3) {
+    for (let i = num1; i <= num2; i += num3) {
+        console.log(i);
+    }
+
+}
 
 // logBetweenStepper(5, 9, 1);
 /* prints out:
