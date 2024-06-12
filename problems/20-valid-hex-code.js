@@ -7,7 +7,25 @@ Each character must be a digit from 0-9 or an alphabetic character from A-F.
 All alphabetic characters may be uppercase or lowercase.
 */
 
-// Your code here 
+function validHexCode(str) {
+  let hexCode = ['#', 'a', 'b', 'c', 'd', 'e', 'f', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  let check = false;
+  let i = 0;
+  str = str.toLowerCase();
+  if (str[0] === '#' && str.length === 7) {
+    check = true;
+  }
+  while (check === true && i < str.length) {
+    if (hexCode.includes(str[i])) {
+      check = true;
+    } else if (hexCode.includes(str[i]) === false) {
+      check = false;
+    }
+    i++;
+  }
+
+  return check;
+}
 
 // console.log(validHexCode("#123456"));  // true
 // console.log(validHexCode("!123456"));  // false
@@ -24,4 +42,4 @@ All alphabetic characters may be uppercase or lowercase.
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 try {
   module.exports = validHexCode;
-} catch {}
+} catch { }
