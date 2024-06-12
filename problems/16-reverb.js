@@ -7,7 +7,21 @@ not a string, say someone passes in a number as an argument, then return null.
 Vowels are the letters "a", "e", "i", "o", "u".
 */
 
-// Your code here 
+function reverb(str) {
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let parse = str.length;
+    if (typeof str !== "string") {
+        return null;
+    }
+
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i].toLowerCase())) {
+            parse = i;
+        }
+    }
+    return str + str.slice(parse, str.length);
+}
+
 
 // console.log(reverb('running')); // runninging
 // console.log(reverb('FAMILY'));  // FAMILYILY
